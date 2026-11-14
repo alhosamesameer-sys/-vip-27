@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#21170f">
+<meta name="description" content="معسلات VIP 27 — أهلاً وسهلاً بكم. تعرّفوا على المحل وموقعه وطرق التواصل.">
+<title>معسلات VIP 27 | أهلاً وسهلاً بكم</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
+:root{--bg:#17120e;--panel:#211811;--wood:#8b542e;--gold:#e7b75c;--cream:#f5ead7;--muted:#c4b39d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:78px}body{margin:0;background:var(--bg);color:var(--cream);font-family:'Cairo',Tahoma,sans-serif;line-height:1.8}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:#17120eeF;border-bottom:1px solid #ffffff16;backdrop-filter:blur(14px)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:11px;font-weight:900}.mark{width:43px;height:43px;border:1px solid var(--gold);border-radius:13px;display:grid;place-items:center;color:var(--gold);font-size:14px;letter-spacing:1px}.brand small{display:block;color:var(--muted);font-size:11px;font-weight:500;margin-top:-5px}
+nav{display:flex;gap:24px;color:#e8d8c1;font-size:14px}nav a:hover{color:var(--gold)}.menu{display:none;background:none;color:var(--cream);border:1px solid #ffffff30;border-radius:10px;padding:8px 12px;font:inherit}
+.hero{padding:55px 0 70px;min-height:590px;display:grid;grid-template-columns:1.02fr .98fr;gap:38px;align-items:center;background:radial-gradient(ellipse at 15% 40%,#a86a2b25,transparent 55%)}
+.eyebrow{color:var(--gold);font-size:13px;font-weight:700;letter-spacing:1px}.hero h1{font-size:clamp(38px,6vw,68px);line-height:1.2;margin:13px 0 18px;font-weight:900}.hero h1 span{color:var(--gold)}.hero p{color:var(--muted);font-size:17px;max-width:540px;margin:0 0 28px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:12px 22px;border-radius:12px;font-weight:800;font-size:14px;border:1px solid var(--gold);display:inline-flex;align-items:center;justify-content:center;transition:.2s}.btn.primary{background:linear-gradient(135deg,#f0c56f,#b77b32);color:#20150d;border:0}.btn.secondary{color:var(--gold)}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.hero-photo{min-height:410px;border-radius:24px;overflow:hidden;position:relative;border:1px solid #d9a84c55;background:linear-gradient(135deg,#56351e,#21170f 55%,#8c572e);box-shadow:0 24px 70px #0008}
+.hero-photo:before{content:"";position:absolute;inset:12px;border:1px solid #f0c56f77;border-radius:17px;z-index:1;pointer-events:none}
+.hero-photo img{width:100%;height:100%;min-height:410px;object-fit:cover;display:block;filter:saturate(.88)}
+.photo-note{position:absolute;bottom:25px;right:25px;z-index:2;background:#17120edc;border:1px solid #e7b75c66;border-radius:12px;padding:10px 16px;color:var(--gold);font-weight:800}
+.section{padding:76px 0}.section-head{text-align:center;margin:0 auto 34px;max-width:650px}.section-head .eyebrow{margin-bottom:5px}.section h2{font-size:clamp(27px,4vw,39px);margin:4px 0 9px}.section-head p{color:var(--muted);margin:0}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature{background:linear-gradient(145deg,#2b2017,#1d1712);border:1px solid #ffffff12;border-radius:18px;padding:25px}.feature .ico{font-size:25px;color:var(--gold)}.feature h3{margin:8px 0 4px;font-size:18px}.feature p{color:var(--muted);font-size:14px;margin:0}
+.about{background:linear-gradient(110deg,#241a12,#1a140f);border-block:1px solid #ffffff12}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}.about-art{min-height:290px;border-radius:20px;background:radial-gradient(circle at 50% 45%,#d99b3c66,transparent 42%),linear-gradient(135deg,#684025,#24180f);display:grid;place-items:center;border:1px solid #d9a84c55}.about-art strong{font-size:clamp(42px,7vw,76px);color:#f0c56f;text-shadow:0 8px 28px #0008;letter-spacing:4px}.about-copy p{color:var(--muted)}
+.contact-card{background:linear-gradient(135deg,#3a2819,#21170f);border:1px solid #d6a34c55;border-radius:22px;padding:30px;text-align:center}.contact-card p{color:var(--muted);max-width:650px;margin:0 auto 18px}
+footer{border-top:1px solid #ffffff18;padding:25px 0;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.foot b{color:var(--gold)}
+.notice{font-size:12px;color:#b8a58d;text-align:center;padding:14px 0 24px}
+@media(max-width:760px){.nav{height:64px}.menu{display:block}nav{display:none;position:absolute;top:64px;right:0;left:0;background:#1c150f;padding:16px 5%;border-bottom:1px solid #ffffff20;flex-direction:column;gap:10px}nav.open{display:flex}.hero{grid-template-columns:1fr;padding:38px 0 48px;gap:24px;min-height:auto}.hero-photo,.hero-photo img{min-height:290px}.hero p{font-size:15px}.features{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr}.section{padding:55px 0}.contact-card{padding:24px 17px}.brand{font-size:14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#home" aria-label="VIP 27 الصفحة الرئيسية"><span class="mark">VIP<br>27</span><span>معسلات VIP 27<small>أهلاً وسهلاً بكم</small></span></a>
+<button class="menu" id="menuBtn" aria-expanded="false" aria-controls="mainNav">القائمة ☰</button>
+<nav id="mainNav"><a href="#home">الرئيسية</a><a href="#about">من نحن</a><a href="#visit">تواصل معنا</a></nav>
+</div></header>
+<main>
+<section class="wrap hero" id="home">
+<div><div class="eyebrow">مرحباً بكم في VIP 27</div><h1>أهلاً وسهلاً،<br><span>نورتونا</span></h1><p>يسعدنا أن نرحب بكم في معسلات VIP 27. اكتشفوا أجواء محلنا وتعرّفوا على المكان من خلال الصور ومعلومات الزيارة.</p><div class="actions"><a class="btn primary" href="#about">تعرّف علينا</a><a class="btn secondary" href="#visit">معلومات التواصل</a></div></div>
+<div class="hero-photo"><img src="assets/shop-main.jpg" alt="الواجهة الداخلية لمحل VIP 27" fetchpriority="high"><div class="photo-note">VIP 27 · أهلاً بكم</div></div>
+</section>
+<section class="section"><div class="wrap"><div class="section-head"><div class="eyebrow">VIP 27</div><h2>نرحب بزيارتكم</h2><p>مساحة تعريفية بمحلنا، مستوحاة من تفاصيل الديكور الخشبي والإضاءة الدافئة الظاهرة في صور المكان.</p></div>
+<div class="features"><article class="feature"><div class="ico">✦</div><h3>هوية مميزة</h3><p>تصميم داخلي بطابع خشبي وزخارف مضيئة ولمسات ذهبية.</p></article><article class="feature"><div class="ico">⌂</div><h3>المحل من الداخل</h3><p>شاهدوا صور المكان وتفاصيل واجهات العرض والديكور.</p></article><article class="feature"><div class="ico">♡</div><h3>أهلاً بكم دائماً</h3><p>نسعد بزيارتكم وبتواصلكم للاستفسار عن معلومات المحل.</p></article></div></div></section>
+<section class="section about" id="about"><div class="wrap about-grid"><div class="about-art"><strong>VIP 27</strong></div><div class="about-copy"><div class="eyebrow">من نحن</div><h2>معسلات VIP 27</h2><p>مرحباً بكم في موقع معسلات VIP 27 التعريفي. أنشأنا هذه الصفحة لتكون نافذتكم للتعرّف على المحل وأجوائه ومعلومات التواصل، مع تصميم يستلهم ألوان الخشب والإضاءة الذهبية من ديكور المكان الحقيقي.</p><p>أهلاً وسهلاً بكم، ونتمنى لكم تصفحاً ممتعاً.</p></div></div></section>
+<section class="section" id="visit"><div class="wrap"><div class="section-head"><div class="eyebrow">يسعدنا تواصلكم</div><h2>تواصل معنا</h2><p>نرحب باستفساراتكم وملاحظاتكم. ستضاف هنا بيانات الهاتف والعنوان وساعات العمل بعد تزويدنا بها.</p></div><div class="contact-card"><h3>أهلاً وسهلاً بكم في VIP 27</h3><p>لإكمال بيانات التواصل على الموقع، نحتاج رقم الهاتف أو الواتساب، وعنوان المحل، وساعات العمل.</p><a class="btn secondary" href="#home">العودة إلى الرئيسية ↑</a></div></div></section>
+</main>
+<div class="notice wrap">هذا موقع تعريفي بالمحل فقط، وليس منصة لبيع منتجات التبغ أو طلبها عبر الإنترنت. منتجات التبغ ضارة بالصحة.</div>
+<footer><div class="wrap foot"><span>© <span id="year"></span> <b>معسلات VIP 27</b> — جميع الحقوق محفوظة</span><span>صُمم بعناية ليتناسب مع الهاتف أولاً</span></div></footer>
+<script>
+const btn=document.getElementById('menuBtn'),nav=document.getElementById('mainNav');
+btn.addEventListener('click',()=>{const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',String(open));});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');btn.setAttribute('aria-expanded','false')}));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body></html>

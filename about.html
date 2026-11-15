@@ -22,6 +22,13 @@
 .dots button{width:7px;height:7px;padding:0;border:0;border-radius:99px;background:#78634a;cursor:pointer;transition:all .3s}
 .dots button.active{width:24px;background:var(--gold)}
 .back{display:block;width:max-content;margin:0 auto 50px;border:1px solid var(--gold);color:var(--gold);padding:9px 18px;border-radius:11px}@media(max-width:650px){.nav{align-items:flex-start;flex-direction:column;padding:11px 0}nav{gap:15px;flex-wrap:wrap}.intro{grid-template-columns:1fr}.intro img{height:250px}.gallery{grid-template-columns:1fr}.shot img{height:240px}.hero{padding-top:34px}}
+
+/* تكبير الصور عند الضغط — نفس سلوك صفحات الأقسام */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(8,6,4,.96);z-index:1000;align-items:center;justify-content:center;padding:18px;}
+.lightbox.open{display:flex;}
+.lightbox img{display:block;max-width:96vw;max-height:88vh;width:auto;height:auto;object-fit:contain;border-radius:12px;box-shadow:0 12px 45px #0009;}
+.lightbox .close{position:absolute;top:14px;left:18px;z-index:2;background:#2b2017;color:#fff;border:1px solid var(--gold);border-radius:50%;width:44px;height:44px;font-size:28px;line-height:1;cursor:pointer;}
+body.lightbox-open{overflow:hidden;}
 </style></head><body><header><div class="wrap nav"><a class="brand" href="index.html">VIP 27 · معسلات</a><nav><a href="index.html">الرئيسية</a><a href="about.html">عن المحل</a><a href="contact.html">تواصل معنا</a></nav></div></header><main class="wrap"><section class="hero"><div class="eyebrow">حياكم الله</div><h1>عن معسلات VIP 27</h1><p>وجهتكم في الحوية بالطائف للتعرّف على تشكيلة المحل من الدخان والشيشة والإكسسوارات ومستلزماتها. نحرص على تنوع الخيارات والأسعار المنافسة والاهتمام بجودة ما نقدمه.</p></section><section class="intro"><img src="assets/storefront.jpg" alt="الواجهة الخارجية لمحل VIP 27"><div class="copy"><h2>مكان واحد، أقسام متعددة</h2><p>يضم المحل أقساماً للمعسلات والشيشة والسجائر، إضافة إلى الأراجيل والفحم والنكهات والأدوات والإكسسوارات. تتوفر خيارات متعددة بحسب الأصناف والمخزون، ونسعد بزيارتكم في الحوية.</p></div></section><section class="gallery-title"><div class="eyebrow">جولة بالصور</div><h2>اكتشفوا المحل من كل جهة</h2><p>اضغط على أي صورة لمشاهدتها بحجم أكبر.</p></section><section class="carousel" aria-label="معرض صور المحل">
 <div class="carousel-stage">
 <button class="carousel-arrow prev" type="button" aria-label="الصورة السابقة">›</button>
@@ -44,11 +51,11 @@ function render(){slides.forEach((s,i)=>{s.className='slide';if(i===current)s.cl
 function go(i){current=(i+slides.length)%slides.length;render();restart()}
 function restart(){clearInterval(timer);timer=setInterval(()=>{current=(current+1)%slides.length;render()},3000)}
 prev.addEventListener('click',()=>go(current-1));next.addEventListener('click',()=>go(current+1));
-slides.forEach((s,i)=>s.addEventListener('click',()=>{if(i!==current)go(i);else{const box=document.getElementById('lightbox'),large=document.getElementById('largeImage'),img=s.querySelector('img');large.src=img.src;large.alt=img.alt;box.classList.add('open')}}));
+slides.forEach((s,i)=>s.addEventListener('click',()=>{if(i!==current)go(i);else{const box=document.getElementById('lightbox'),large=document.getElementById('largeImage'),img=s.querySelector('img');large.src=img.src;large.alt=img.alt;box.classList.add('open');document.body.classList.add('lightbox-open')}}));
 track.addEventListener('touchstart',e=>{startX=e.changedTouches[0].clientX},{passive:true});
 track.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-startX;if(Math.abs(dx)>35)go(current+(dx<0?1:-1))},{passive:true});
 let hover=false;track.addEventListener('mouseenter',()=>{hover=true;clearInterval(timer)});track.addEventListener('mouseleave',()=>{hover=false;restart()});
-const box=document.getElementById('lightbox'),large=document.getElementById('largeImage');function closeBox(){box.classList.remove('open');large.src=''}document.getElementById('close').addEventListener('click',closeBox);box.addEventListener('click',e=>{if(e.target===box)closeBox()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBox();if(e.key==='ArrowRight')go(current-1);if(e.key==='ArrowLeft')go(current+1)});
+const box=document.getElementById('lightbox'),large=document.getElementById('largeImage');function closeBox(){box.classList.remove('open');document.body.classList.remove('lightbox-open');large.src=''}document.getElementById('close').addEventListener('click',closeBox);box.addEventListener('click',e=>{if(e.target===box)closeBox()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBox();if(e.key==='ArrowRight')go(current-1);if(e.key==='ArrowLeft')go(current+1)});
 render();restart();
 })();
 </script></body></html>
